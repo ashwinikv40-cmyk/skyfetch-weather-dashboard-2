@@ -12,3 +12,49 @@ body {
     border-radius: 10px;
     display: inline-block;
 }
+
+/* Style .search-section */
+.search-section {
+    margin-bottom: 30px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap; /* responsive */
+}
+
+
+/* Style #city-input */
+#city-input {
+    padding: 12px 20px;
+    border-radius: 25px;
+    border: 2px solid #ddd;
+    flex: 1;
+    font-size: 1rem;
+    outline: none;
+    min-width: 200px;
+    transition: border-color 0.3s ease;
+}
+
+/* Focus effect */
+#city-input:focus {
+    border-color: purple;
+}
+
+
+/* Style #search-btn */
+#search-btn {
+    padding: 12px 30px;
+    background: linear-gradient(to right, purple, blue);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* Hover effect */
+#search-btn:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
