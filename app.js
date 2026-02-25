@@ -1,4 +1,7 @@
 // WeatherApp Constructor
+
+const app = new WeatherApp("4485029656019bd92bdabfdad78ba4c4");
+
 function WeatherApp(apiKey) {
 
     this.apiKey = apiKey;
@@ -408,7 +411,3 @@ WeatherApp.prototype.showWelcome = function() {
 
 };    
 // create app instance
-const app =
-new WeatherApp(
-"4485029656019bd92bdabfdad78ba4c4"
-);
