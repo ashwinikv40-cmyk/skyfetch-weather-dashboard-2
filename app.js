@@ -102,23 +102,34 @@ WeatherApp.prototype.displayRecentSearches = function() {
 };
 
 // init method
-WeatherApp.prototype.init = function () {
+WeatherApp.prototype.init = function() {
 
     this.searchBtn.addEventListener(
-        "click",
+        'click',
         this.handleSearch.bind(this)
     );
 
     this.cityInput.addEventListener(
-        "keypress",
-        (e) => {
+        'keypress',
+        function(e) {
             if (e.key === "Enter") {
                 this.handleSearch();
             }
-        }
+        }.bind(this)
     );
 
-    this.showWelcome();
+    this.loadRecentSearches();
+    this.loadLastCity();   // ← THIS LINE IS IMPORTANT
+};
+
+WeatherApp.prototype.loadLastCity = function() {
+    const lastCity = localStorage.getItem('lastCity');
+
+    if (lastCity) {
+        this.getWeather(lastCity);
+    } else {
+        this.showWelcome();
+    }
 };
 
 // welcome message
@@ -307,3 +318,4 @@ function (data) {
    
 // create app instance
 const app = new WeatherApp("4485029656019bd92bdabfdad78ba4c4");
+app.init();
