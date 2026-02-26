@@ -317,5 +317,5 @@ function (data) {
 };
    
 // create app instance
-const app = new WeatherApp("4485029656019bd92bdabfdad78ba4c4");
+const app = new WeatherApp("79a31c6414ec861f652baf74df376c37");
 app.init();
